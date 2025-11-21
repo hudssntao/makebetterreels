@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-   title: "Kuantra — Orchestrate Your Customer Journeys",
+   title: "MakeBetterReels — AI Content Director for Creators",
    description:
-      "Kuantra gives revenue teams a unified place to design, launch, and optimize customer journeys with real-time insights.",
+      "The AI Content Director that analyzes your brand's data and writes high-performing scripts for you.",
 };
 
 export default function RootLayout({
@@ -32,30 +32,17 @@ export default function RootLayout({
    return (
       <html lang="en" suppressHydrationWarning>
          <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background font-sans text-foreground`}
+            className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-950 font-sans text-white`}
          >
-            <ThemeProvider>
+            <ThemeProvider
+               attribute="class"
+               defaultTheme="dark"
+               enableSystem={false}
+               forcedTheme="dark"
+            >
                <div className="flex min-h-screen flex-col">
-                  <SiteHeader />
+                  {/* <SiteHeader /> */}
                   <main className="flex-1">{children}</main>
-                  <footer className="border-t bg-background/80">
-                     <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-                        <p>
-                           &copy; {new Date().getFullYear()} Kuantra Labs, Inc. All rights reserved.
-                        </p>
-                        <div className="flex gap-4">
-                           <a href="#privacy" className="hover:text-foreground">
-                              Privacy
-                           </a>
-                           <a href="#terms" className="hover:text-foreground">
-                              Terms
-                           </a>
-                           <a href="#sitemap" className="hover:text-foreground">
-                              Sitemap
-                           </a>
-                        </div>
-                     </div>
-                  </footer>
                </div>
             </ThemeProvider>
          </body>
