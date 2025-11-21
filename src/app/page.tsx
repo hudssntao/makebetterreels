@@ -3,6 +3,7 @@
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 // --- Content Data ---
 const dynamicWords = ["Reels", "TikToks", "Shorts"];
@@ -71,8 +72,15 @@ export default function Home() {
                      <Button
                         size="lg"
                         className="bg-white text-black hover:bg-zinc-200 px-8 py-6 text-lg font-semibold rounded-full transition-all"
+                        asChild
                      >
-                        Join the Waitlist
+                        <Link
+                           href="https://form.typeform.com/to/uljtVByl"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                        >
+                           Join the Waitlist
+                        </Link>
                      </Button>
                   </motion.div>
                   <p className="text-sm text-zinc-500">Be the first to access the beta.</p>
@@ -90,7 +98,7 @@ export default function Home() {
             {/* --- SECTION 2: THE PROBLEM ("Current Workflow") --- */}
             <div className="px-4 max-w-4xl w-full flex flex-col items-center justify-center text-center">
                <h3 className="text-sm font-semibold text-red-500 uppercase tracking-widest mb-2">
-                Tired of this?
+                  Tired of this?
                </h3>
                <h2 className="text-6xl md:text-8xl font-bold text-white mb-6">
                   The Content <br /> Treadmill
@@ -124,31 +132,35 @@ export default function Home() {
             {/* Note: Text colors switched to Black here because background will be white/light by this point */}
             <div className="px-4 max-w-4xl w-full flex flex-col items-center justify-center text-center">
                <h3 className="text-sm font-semibold text-blue-600 uppercase tracking-widest mb-2">
-                Our Vision
+                  Our Vision
                </h3>
                <h2 className="text-6xl md:text-8xl font-bold text-black mb-6">
                   The Media <br /> Engine
                </h2>
                <p className="text-zinc-600 text-lg mb-8">
-                  We&apos;re building the system to turn chaos into clarity. A unified workspace for high-volume creators.
+                  We&apos;re building the system to turn chaos into clarity. A unified workspace for
+                  high-volume creators.
                </p>
                <div className="flex flex-col md:flex-row gap-4 w-full justify-center mt-4">
                   <div className="flex-1 bg-white rounded-xl p-6 md:p-8 text-zinc-900 min-w-[220px] max-w-xs shadow-md border border-zinc-200">
                      <h4 className="text-black font-semibold text-xl mb-2">Engineered Virality</h4>
                      <p className="text-zinc-700 leading-relaxed">
-                        Move from &quot;guessing hooks&quot; to using frameworks backed by aggregate performance data.
+                        Move from &quot;guessing hooks&quot; to using frameworks backed by aggregate
+                        performance data.
                      </p>
                   </div>
                   <div className="flex-1 bg-white rounded-xl p-6 md:p-8 text-zinc-900 min-w-[220px] max-w-xs shadow-md border border-zinc-200">
                      <h4 className="text-black font-semibold text-xl mb-2">Asset Library</h4>
                      <p className="text-zinc-700 leading-relaxed">
-                        Treat every video as a data point. Build a compounding asset, not just a feed.
+                        Treat every video as a data point. Build a compounding asset, not just a
+                        feed.
                      </p>
                   </div>
                   <div className="flex-1 bg-white rounded-xl p-6 md:p-8 text-zinc-900 min-w-[220px] max-w-xs shadow-md border border-zinc-200">
                      <h4 className="text-black font-semibold text-xl mb-2">Decoupled Growth</h4>
                      <p className="text-zinc-700 leading-relaxed">
-                        Build a system where your reach isn&apos;t strictly tied to how many hours you grind today.
+                        Build a system where your reach isn&apos;t strictly tied to how many hours
+                        you grind today.
                      </p>
                   </div>
                </div>
@@ -162,12 +174,21 @@ export default function Home() {
                   Ready to stop guessing?
                </h2>
                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-                  <Button className="bg-black hover:bg-zinc-800 text-white px-8 py-6 text-lg font-semibold rounded-full transition-all">
-                     Join the Waitlist
+                  <Button
+                     className="bg-black hover:bg-zinc-800 text-white px-8 py-6 text-lg font-semibold rounded-full transition-all"
+                     asChild
+                  >
+                     <Link
+                        href="https://form.typeform.com/to/uljtVByl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                     >
+                        Join the Waitlist
+                     </Link>
                   </Button>
                </motion.div>
 
-            <p className="text-sm text-zinc-500 mt-4">Be the first to access the beta.</p>
+               <p className="text-sm text-zinc-500 mt-4">Be the first to access the beta.</p>
             </div>
          </div>
 
@@ -175,7 +196,17 @@ export default function Home() {
          <div className="relative z-20 bg-zinc-50 py-10 text-center">
             <p className="text-zinc-400 text-sm">© 2025. All rights reserved.</p>
 
-            <p className="text-zinc-400 text-sm">Made with ❤️ by <a href="https://www.hudsontao.com" target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:text-zinc-800">Hudson Tao</a></p>
+            <p className="text-zinc-400 text-sm">
+               Made with ❤️ by{" "}
+               <a
+                  href="https://www.hudsontao.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-600 hover:text-zinc-800"
+               >
+                  Hudson Tao
+               </a>
+            </p>
          </div>
       </div>
    );
